@@ -1,0 +1,46 @@
+body {
+    background-color: #404456;
+    background-image: url("/img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    position: relative;
+    top: 50%;
+    left: 15%;
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.75;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {box-shadow: 0 0 0 0 rgba(135,145,155,0.6);}
+    60% {box-shadow: 0 0 0 50px rgba(135,145,155,0);}
+    100% {box-shadow: 0 0 0 50px rgba(135,145,155,0);}
+}
+
+@keyframes fadeinout {
+    0% {opacity: 0.25;}
+    50% {opacity: 0.75;}
+    100% {opacity: 0.25;}
+}
+
+.circle:hover {
+    opacity: 0.9;
+    transition: opacity 1s;
+}
