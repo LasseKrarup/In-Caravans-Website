@@ -23,21 +23,47 @@ body {
 }
 
 .circle {
-    position: relative;
-    top: 50%;
-    left: 15%;
-    display: block;
+    position: absolute;
+    display: flex;
+    align-content: center;
     background-color: $primarycolor;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    min-width: 80px;
+    width: 10%;
     opacity: 0.75;
     transition: opacity 1s;
     animation: pulse 3s infinite;
+    font-size: 5vw;
+    
     transition: all 1s;
         &:hover {
         opacity: 0.9;
         transform: scale(1.1);
     }
+    
+    &#topleft {
+        top: $toppos;
+        left: $leftpos;
+    }
+
+    &#topright {
+        top: $toppos;
+        right: $rightpos;
+    }
+
+    &#bottomleft {
+        bottom: $bottompos;
+        left: $leftpos;
+    }
+
+    &#bottomright {
+        bottom: $bottompos;
+        right: $rightpos;
+    }
 }
 
+i {
+    position: relative;
+    margin: auto;
+    color: $backgroundcolor;
+}
