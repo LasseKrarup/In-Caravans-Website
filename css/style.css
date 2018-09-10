@@ -152,11 +152,13 @@ body {
   width: 100px;
   height: 100px;
   opacity: 0.75;
+  transition: opacity 1s;
   animation: pulse 3s infinite;
+  transition: all 1s;
 }
 .circle:hover {
   opacity: 0.9;
-  transition: opacity 1s;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */
