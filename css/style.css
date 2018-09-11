@@ -215,7 +215,7 @@
 /* MAIN STYLES */
 body {
   background-color: #404456;
-  background-image: url("/img/banner.jpg");
+  background-image: url("/img/banner-min.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -288,10 +288,6 @@ a:hover {
 
 /* PHONES AND TABLETS */
 @media screen and (max-width: 991px) {
-  body {
-    background-image: url("/img/banner-min.jpg");
-  }
-
   .circle {
     font-size: 7vh;
   }
