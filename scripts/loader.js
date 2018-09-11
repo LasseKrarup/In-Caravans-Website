@@ -1,6 +1,11 @@
 $(document).ready(function() {
     var w = $(".circle").css("width");
     $(".circle").css("height", w);
+    
+    $(".circle").click(function () {
+        window.open($(this).find("a:first").attr("href"));
+        return false;
+    });
 });
 
 $(window).on('load', function() {
