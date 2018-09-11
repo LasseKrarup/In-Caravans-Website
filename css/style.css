@@ -247,7 +247,7 @@ body {
   transition: opacity 1s;
   -webkit-animation: pulse 3s infinite;
   animation: pulse 3s infinite;
-  font-size: 10vh;
+  font-size: 11vh;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -290,5 +290,9 @@ a:hover {
 @media screen and (max-width: 991px) {
   body {
     background-image: url("/img/banner-min.jpg");
+  }
+
+  .circle {
+    font-size: 7vh;
   }
 }
