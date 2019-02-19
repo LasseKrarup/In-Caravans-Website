@@ -2,13 +2,13 @@
 
 const { src, dest, pipe, serial, parallel } = require('gulp');
 
-const gulp-autoprefixer = require('gulp-autoprefixer');
-const gulp-concat = require('gulp-concat');
-const gulp-sass = require('gulp-sass');
+const gulpautoprefixer = require('gulp-autoprefixer');
+const gulpconcat = require('gulp-concat');
+const gulpsass = require('gulp-sass');
 
-gulp-sass.compiler = require('node-sass');
+gulpsass.compiler = require('node-sass');
 
-let dist = './dist/';
+let dist = './dist';
 
 function build(cb){
 	console.log("Building...")
@@ -17,9 +17,21 @@ function build(cb){
 }
  
 function sass() {
-  return gulp.src('./sass/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+  return src('./sass/*.scss')
+    .pipe(gulpsass().on('error', gulpsass.logError))
+    .pipe(dest('./css'));
 };
 
+function autoprefixer() {
+	return src('./**/style.css')
+		.pipe(gulpautoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(dest(dist));
+}
+
 exports.default = build;
+exports.build = build;
+exports.sass = sass;
+exports.autoprefixer = autoprefixer;
