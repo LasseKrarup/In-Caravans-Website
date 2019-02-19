@@ -19,7 +19,7 @@ function build(cb){
 function sass() {
   return src('./sass/*.scss')
     .pipe(gulpsass().on('error', gulpsass.logError))
-    .pipe(dest('./css'));
+    .pipe(dest('css'));
 };
 
 function autoprefixer() {
