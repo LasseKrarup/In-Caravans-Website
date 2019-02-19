@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/LasseKrarup/In-Caravans-Website/issues"
   },
-  "homepage": "https://github.com/LasseKrarup/In-Caravans-Website#readme"
+  "homepage": "https://github.com/LasseKrarup/In-Caravans-Website#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  }
 }
