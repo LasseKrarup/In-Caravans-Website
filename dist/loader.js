@@ -1,0 +1,1 @@
+$(document).ready(function(){var i=$(".circle").css("width");$(".circle").css("height",i),$(".circle").click(function(){return window.open($(this).find("a:first").attr("href")),!1})}),$(window).on("load",function(){$("#loadwrap").fadeOut(1500)}),$(window).resize(function(){$(".circle").width("10%");var i=$(".circle").width();$(".circle").height(i)});
